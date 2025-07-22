@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="home-container">
+    <div class="main-buttons">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Welcome to GetFit!</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Start your fitness journey with personalized workout programs, track your progress, and stay motivated.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-button (click)="goToWorkouts()" expand="block" color="primary">View Workouts</ion-button>
+      <ion-button (click)="goToProgress()" expand="block" color="tertiary">View Progress</ion-button>
+      <ion-button (click)="logout()" expand="block" color="medium">Log Out</ion-button>
+    </div>
+
+    <ion-card class="about-card">
+      <ion-card-header>
+        <ion-card-title>About GetFit</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        GetFit is your companion for building healthier habits. Whether you're aiming for weight loss, muscle gain,
+        or simply to stay active, we offer workouts tailored to your goals. Track your progress, stay consistent,
+        and achieve results — all from your mobile device.
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

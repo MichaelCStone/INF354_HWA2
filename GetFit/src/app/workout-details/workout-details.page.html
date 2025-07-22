@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ workout?.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngIf="workout">
+    <ion-card-header>
+      <ion-card-title>{{ workout.title }}</ion-card-title>
+      <ion-card-subtitle>{{ workout.duration }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ workout.description }}</p>
+      <h3>Exercises:</h3>
+      <ul>
+        <li *ngFor="let ex of workout.exercises">{{ ex }}</li>
+      </ul>
+      <p><strong>Equipment:</strong> {{ workout.equipment }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" color="success" (click)="markCompleted()">{{ completed ? 'Completed' : 'Mark as Completed' }}</ion-button>
+  <ion-button expand="block" fill="outline" (click)="goHome()">Home</ion-button>
+  <ion-button expand="block" fill="outline" (click)="goProgress()">View Progress</ion-button>
+</ion-content>
